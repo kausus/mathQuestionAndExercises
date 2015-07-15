@@ -1,0 +1,77 @@
+%% encodings                                        
+\usepackage[T1]{fontenc}                            
+\usepackage[utf8]{inputenc}                         
+\usepackage[shorthands=off]{babel}                  
+\usepackage{lmodern}                                
+\usepackage{microtype}                              
+\usepackage{scrlayer-scrpage}                       
+\usepackage{enumerate}                              
+\usepackage{csquotes}                               
+%% maths                                            
+\usepackage{amsmath}                                
+\usepackage{mathtools}                              
+\usepackage{amsthm}
+\usepackage{amssymb}                                 
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+
+\usepackage{wasysym}
+
+%commutative diagramms
+\usepackage{tikz-cd}
+
+%links                                              
+\usepackage{hyperref}                               
+                                                    
+%special mathsymbols                                
+\newcommand{\C}{\mathds{C}}                         
+\newcommand{\R}{\mathds{R}}                         
+\newcommand{\N}{\mathds{N}}                         
+\newcommand{\Z}{\mathds{Z}}                         
+\newcommand{\Q}{\mathds{Q}}
+%\newcommand{\P}{\mathcal{P}}
+\newcommand{\p}{\mathfrak{p}}
+
+                                                    
+%%%%%%%%%%%%%%%%%%%%                                
+%theoremstyle                                       
+%\theoremstyle{definition}                           
+%\newtheorem*{Def}{Defintion}                        
+%\theoremstyle{plain}                               
+%\newtheorem{Beh}{Beh}                              
+%\newtheorem{Vor}{Vor}                                                    
+                          
+% math (theorems)                     
+\theoremstyle{definition}             
+\newtheorem{Def}{Definition}[section] 
+\newtheorem{Bsp}[Def]{Beispiel}       
+\theoremstyle{remark}               
+\newtheorem{Bem}[Def]{Bemerkung}      
+\newtheorem{Wdh}[Def]{Wiederholung}   
+\theoremstyle{plain}                  
+\newtheorem{Satz}[Def]{Satz}          
+\newtheorem*{satz}{Satz}              
+\newtheorem{Lem}[Def]{Lemma}          
+\newtheorem{Kor}[Def]{Korollar}       
+\newtheorem{Fol}[Def]{Folgerung}      
+\newtheorem{Beh}[Def]{Behauptung}
+\newtheorem{Auf}[Def]{Aufgabe}
+                          
+%stuff used only a few times                        
+\DeclareMathOperator{\f}{\varphi}                         
+\newcommand{\spec}[1]{Spec \left( #1 \right)}
+% \newcommand{\exxp}[1]{\exp \left( #1 \right)}       
+% \renewcommand{\sin}[1]{\sin \left( #1 \right)}      
+
+%title                                            
+% \title{Übungsblatt ??}                            
+% \subtitle{Theo, Gruppe 1}                         
+% \author{Julian Seipel}                            
+% \pagestyle{scrheadings}                           
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,726 @@
+\documentclass[ngerman, parskip=half, titlepage=false]{scrartcl}
+
+\input{config}
+
+\begin{document}
+
+\part{Aufgabensammlung}
+
+\section{Ringe}
+
+\begin{Satz}
+  Sei $R$ ein endlicher Ring, so sind äquivalent:\\
+  \begin{itemize}
+  \item[i)] $R$ ist Körper
+  \item[ii)] $R$ ist Integritätsring
+  \end{itemize}
+Hinweis: Prüfe das jedes Primideal schon maximal ist.
+\begin{proof}
+  \begin{description}
+    \item[$i) \Rightarrow ii)$] klar
+    \item[$ii) \Rightarrow i)$] Da $R$ ein endlicher Ring ist, so
+      betrachte für ein beliebiges Element $a \in R \setminus \{ 0 \}$
+      die Menge $\{ a^n | n \in \N \} \subset R$. Diese Menge ist
+      endlich als Teilmenge einer endlichen Menge, somit gibt es
+      $n,m \in \N$ mit $n \neq m$ so dass gilt $a^n = a^m$. OBdA gilt
+      $n > m$ , so folgt $a^m (a^{n-m} - 1) = 0$. Da $R$ ein Integritätsring ist
+      gilt $a^m = 0$ oder $a^{n-m} = 1$. Bei letzteren Fall ist man fertig, bei 
+      erstem falls ist noch zu zeigen, das jedes Element in einem endlichen Ring
+      entweder Einheit oder Nullteiler. Also sind alle Nullteiler schon
+      nilpotent. Aber da $R$ integer ist, folgt die Behauptung.
+  \end{description}
+\end{proof}
+\end{Satz}
+
+\begin{Satz}
+  Sei $R \neq 0$ Ring und $\mathcal{M} \subset R$ ein maximales Ideal.
+  So ist $R/\mathcal{M}^n$ lokaler Ring, für alle $n \in \N_{\geq 1}$
+\end{Satz}
+
+\begin{Satz}
+  Zeige: Jeder Unterring $S \subset \Q$ ist eine Lokalisierung von $\Z$
+\end{Satz}
+
+\begin{Def}
+  Sei $R$ Ring, so definierte das \textbf{Radikalideal} von $R$, als
+  \begin{gather*}
+    rad(R) \coloneqq \left\{ r \in R \; \Big| \; \exists n \in
+      \N_{\geq 1} : r^n = 0 \right\}
+  \end{gather*}
+  Dieser Ring heißt \textbf{reduziert}, falls gilt:
+  \begin{gather*}
+    rad(R)=\sqrt{R} =0
+  \end{gather*}
+\end{Def}
+
+\begin{Satz}[Universelle Eigenschaft des Radikalideals]
+  Sei $R$ Ring, und $R_{red} = R/rad(R)$. Zeige 
+  \begin{itemize}
+    \item[1)] $R_{red}$ ist reduziert
+      
+    \item[2)] Jeder Ringhomomorphismus $\varphi : R \rightarrow
+      R^{'}$, nach einem reduzierten Ring $R^{'}$, faktorisiert
+      über die kanonische Projektion $\pi : R \rightarrow R_{red}$, 
+      so dass gilt: $\exists ! \bar{\varphi} : R_{red} \rightarrow R^{'}$
+      mit $\pi \bar{\varphi} = \varphi$
+  \end{itemize}
+\end{Satz}
+
+\begin{Lem}
+  Es gibt nur endlich viele Gruppen $G$ der Ordnung $n \in \N$
+\end{Lem}
+
+\begin{Satz}
+  Sei $S \subset R$ beliebige Teilmenge eines Ringes und $I=<S>$, das
+  Ideal von $S$ erzeugt, so gilt:\\
+  \begin{gather*}
+    I=R \Leftrightarrow \forall m : \text{maximales Ideal} : m \cap S 
+    \neq \emptyset
+  \end{gather*}
+ 
+\end{Satz}
+
+\begin{Satz}[Lokalisierung mit einem Element]                   
+  Sei $R$ Ring, und $f \in R$ mit $f$ nicht nilpotent, so gilt  
+  die Isomorphie (wobei $R_f$ die Lokalisierung nach $\left\{   
+    f^n \; \Big| \; n \in N \right\}$ bedeutet)                 
+  \begin{gather*}                                               
+    R_f \simeq R[X]/(fX - 1)                                    
+  \end{gather*}                                                 
+\end{Satz}                                                      
+
+\begin{Bsp}
+  \begin{itemize}
+    \item $\Z[\frac{1}{2}] \simeq \Z[X]/(2X-1)$
+  \end{itemize}
+\end{Bsp}
+
+\begin{Lem}
+  Sei $R$ Ring, $f \in R$ ein beliebiges Element und $n \in \N$ Zeige:\\
+  \begin{gather*}
+    \displaystyle R_f \simeq R_{f^n}
+  \end{gather*}
+  \begin{proof}
+    Setze $S \coloneqq \{ f^k | k \in \N \}$ und $\hat{S} \coloneqq \{ f^{kn} 
+    | k \in \N\}$. Es ist zu zeigen, dass die beiden multiplikativen Systeme
+    die selbe Lokalisierung erzeugen.
+  \end{proof}
+\end{Lem}
+
+\section{Topologische Räume}
+
+\begin{Satz}
+  Sei $X$ ein endlicher, hausdorffscher, topologischer Raum, so ist
+  dieser diskret.
+Anmerkungen: endlich $\rightarrow X$ als Menge endlich\\
+diskret $\rightarrow$ die Topologie ist die Potenzmenge
+\end{Satz}
+
+\section{Ringe und anderes}
+
+\begin{Lem}
+  Sei $Q[\cos x , \sin x]$ der kleinste Unterring von $\R^\R$ der
+  die beiden transzendenten Funktionen $\sin , \cos$ enthält. Zeige
+  dass das allgemeine Element in diesem Unterring von der folgenden
+  Form ist:
+  \begin{gather*}
+    a_0 + \sum\limits_{m=1}^n a_m \cos mx + b_m \sin mx
+  \end{gather*}
+\end{Lem}
+
+\begin{Lem}
+  Sei $n \in \N$.\\
+  \begin{itemize}
+    \item[1)] Jedes Ideal von $\Z/(n)$ ist Hauptideal
+    \item[2)] Bestimme alle Radikalideale von $\Z/(n)$
+  \end{itemize}
+  \begin{proof}
+    \begin{description}
+      \item[1)] klar, aufgrund der additiven Struktur der Menge $\Z$
+      \item[2)] Es ist zu zeigen das gilt:\\
+        \begin{gather*}
+          \left\{ p \subset \Z \Big| p \text{ Ideal } , \sqrt{p} = p
+          \right\} =  \left\{ \bigcap_i (p_i) \Big| n \in \N ,
+            \forall i \leq n : p_i \in \spec{R} \right\}
+        \end{gather*}
+        Da $\Z$ ein noetherscher Ring ist, gibt es eine eindeutige Zerlegung
+        jedes Ideal in primäre Ideale. Da $\Z$ Hauptidealring ist, folgt
+        unmittelbar das die primären Ideale genau die Potenzen von den 
+        Primidealen sind. Also hat ein Ideal $I \subset \Z$ die Form.
+        \begin{gather*}
+          I = (n) = \; \bigcap\limits_{p | n} \; (p^{n_p} ) \;
+        \end{gather*}
+        Da nun die Radikalbildung mit dem endlichen Schnitt vertauscht und
+        $\sqrt{(p^n)} = (p) $ für eine Primzahl $p \in \N$. Somit folgt die
+        Behauptung.
+      \end{description}
+  \end{proof}
+\end{Lem}
+
+\begin{Satz}
+  Sei $R$ ein (allgemeiner) Ring, hier im Allgemeinen nicht kommutativ
+  und/oder mit Eins, aber immer assoziativ, zeige oder wiederlege
+  durch Gegenbeispiele folgende Behauptungen:
+  \begin{itemize}
+    \item[1)] Es existiert ein Ring $S$ mit Eins und ein Ringhomomorphismus 
+      $\varphi : R \rightarrow S$
+    \item[2)] Es existiert ein Ring $S$ mit Eins und ein Monomorophismus
+      $\psi : R \rightarrow S$
+  \end{itemize}
+\end{Satz}
+
+\begin{Satz}
+  Sei $n \in \N$, so sind folgende Aussagen äquivalent:\\
+  \begin{itemize}
+    \item[i)] $Z/(n)$ ist lokaler Ring
+    \item[ii)] $n$ ist Primpotenz, also gilt $\exists m,p \in \N : $ 
+      $p$ ist prim: $n=p^m$
+    \end{itemize}
+\end{Satz}
+
+$R$ ist Ring mit eins, und $I \subset R$ ein Ideal, definiere $D(R,I) \coloneqq
+\left\{ (a,b) \in R \times R \Big| a-b \in I  \right\}$. Zeige $D(R,I)$ ist
+Unterring von $R$.
+
+$ 0 \in D(R,I)$ ist klar.\\
+
+$(a_1,b_1),(a_2,b_2) \in D(R,I)$, so folgt $(a_1,b_1)*(a_2,b_2) = (a_1a_2,b_1b_2)$
+so betrachte $a_1a_2 - b_1b_2$, mit $\exists i_1,i_2 \in I: a_1 = b_1 + i_1$ und
+$a_2 = b_2 + i_2$, so folgt\\
+
+\begin{Satz}
+  Sei $F$ die frei Gruppe mit den Erzeugern $a,u$, betrachte den
+  Quotienten:
+  \begin{gather*}
+    Q \coloneqq F/\{ ua=e, au=u^2a^2 \}
+  \end{gather*}
+  Zeige, das gilt: $uaa \neq auu$
+\end{Satz}
+
+\begin{Lem}
+  Sei $R$ lokaler Ring, und $n \in \N$.\\
+  So gilt für $A \in GL(n,R)$, in jeder Zeile oder Spalte befindet
+  sich mindestens eine Einheit.
+\end{Lem}
+
+\begin{Lem}
+  Seien $n, m \in \Z$ , so gilt für den Idealquotienten, für zwei
+  Ideale $I,J \subset \R$ von einem Ring $R$
+  \begin{gather*}
+    \left( I:J \right) = \left\{ r \; \Big| \; r J \subset I   \right\}
+  \end{gather*}
+  Es gilt nun in $\Z$
+  \begin{gather*}
+    (n:m) = (m / gcd(n,m))
+  \end{gather*}
+\end{Lem}
+
+\begin{Beh}
+  Sei $R$ Ring und $p,q \in \spec{R}$, Primideale. So soll gelten:
+  \begin{gather*}
+    p,q \text{ minimale Primideale} \Rightarrow p,q \text{ coprim}
+  \end{gather*}    
+\end{Beh}
+
+\begin{Lem}
+  Seien $n,m \in \Z$ so gilt: $\Z/(n) \otimes_{\Z} \Z/(m) \simeq \Z/(gcd(n,m))$
+\end{Lem}
+
+\begin{Lem}
+  Seien $N,M$ $R$-Moduln, und $N$ ein freies Moduln, also
+  $N \simeq R^{(I)}$ für eine Indexmenge $I$, so gilt:
+  \begin{gather*}
+    N \otimes_R M \simeq M^{(I)}
+  \end{gather*}
+  \begin{proof}
+    Es gilt, aufgrund dessen das $N$ ein freier Moduln über die
+    Indexmenge $I$ ist.  Es gibt nun ein freies erzeugenden System
+    $(x_i)_{i \in I}$, so folgt aufgrund der Vertauschung von dem
+    Tensorprodukt und der direkten Summe, so gilt mit $Rx \simeq R$
+    für ein $x \in M$, als $R$- Moduln
+    \begin{gather*}
+      N \otimes_R M 
+      \simeq
+      ( \bigoplus_{i \in I} R x_i ) \otimes_R M
+      \simeq
+      \bigoplus_{i \in I} ( R x_i \otimes_R M)
+      \simeq
+      \bigoplus_{i \in I} ( R  \otimes_R M)
+      \simeq
+      \bigoplus_{i \in I} M
+      \simeq
+      M^{(I)}
+    \end{gather*}
+  \end{proof}
+\end{Lem}
+
+\begin{Beh}
+  Sei $A$ eine abelsche Gruppe, also $\Z$-Modul, so soll gelten:\\
+  $A \otimes_\Z \Q = 0 \Leftrightarrow$ $A$ ist Torsionsgruppe.\\
+  Für $A$ ist Torsionsgruppe, falls gilt: $\forall a \in A \; \exists n \in \Z \;
+  na = 0$
+\end{Beh}
+
+\begin{Lem}
+  Sei $(A_i)_{i \in I}$ eine Familie von Torsionsgruppen, so gilt:
+  $A = \bigoplus_{i \in I} A_i$ ist Torsionsgruppe.
+  \begin{proof}
+    Sei $(a_i)_{i \in I} \in A$, so gilt für jeden Eintrag dieser
+    Familie von Elementen aus den Torsionsgruppen. Für jedes $i \in I$ existiert
+    $n_i \in \Z$ so dass $n_i a_i = 0 $. Da in direkten Summe nur endliche viele 
+    Elemente von Null verschieden sind, setze
+    \begin{gather*}
+      n \coloneqq \prod\limits_{i \in I} n_i
+    \end{gather*}
+    dieses Produkt ist wohldefiniert, bzw endlich, nach vorherigen Argument der
+    direkten Summe.
+    so gilt nun $n (a_i)_{i \in I} = (n a_i)_{i \in I} = ( 0 )_{i \in I} $
+  \end{proof}
+\end{Lem}
+
+\begin{Satz}
+  Zeige folgende Aussagen:
+  \begin{enumerate}[a)]
+  \item  Sei $(R,m)$ ein lokaler, noetherscher Ring, zeige: \\
+    Für $p \subset R$ $m$-primäres Ideal so ist $R/p$ ist artinsch.
+  \item Die direkte Summe von artinschen Ringen ist wieder artinsch
+  \end{enumerate}
+  \begin{proof}
+    \begin{description}
+    \item[a)] Es gilt zunächst, das $m = \sqrt{p}$ gilt, da $R/p$ als Quotient eines
+      noetherschen Ringes wieder noethersch ist, ist das maximal Ideal endlich  
+      erzeugt. Also existiert ein $n \in \N$ mit $\pi(m^n) = 0$
+      %TODO, warum ist das bild des maximalen ideals im faktorring R/p maximal
+      %TODO warum ist der faktorring lokal?
+    \end{description}
+  \end{proof}
+\end{Satz}
+
+\begin{Satz}
+  Seien $R_1,R_2,\ldots,R_n$ Ringe, so gilt:
+  \begin{gather*}
+    \spec{\prod\limits_{i = 1}^n R_i} \simeq \coprod\limits_{i=1}^n \spec{R_i}
+  \end{gather*}
+  \begin{proof}
+    Es gilt für die Primideale aus $R_1 \times \ldots \times R_n$ das sie von 
+    der folgenden Gestalt sind:
+    \begin{gather*}
+      R_1 \times \ldots \times p_i \times \ldots \times  R_n
+    \end{gather*}
+    für ein $p_i \in \spec{R_i}$. Die Gestalt des Koprodukts ist wie folgt:
+    \begin{gather*}
+      \coprod\limits_{i} R_i \; = \;  \prod\limits_i (i,R_i)
+    \end{gather*}
+    So folgt die Behauptung durch folgende kanonische Abbildung:\\
+    \begin{center}
+    \begin{tikzcd}
+      \spec{\prod\limits_{i = 1}^n R_i} 
+      \ar[r]
+      & \coprod\limits_{i=1}^n \spec{R_i}
+    \end{tikzcd}\\
+    \begin{tikzcd}
+      R_1 \times \ldots \times p_i \times \ldots \times R_n \ar[r,
+      mapsto] & (i,p_i)
+    \end{tikzcd}
+  \end{center}
+\end{proof}
+\end{Satz}
+
+\begin{Beh}
+  Sei $R$ ein Ring und $Q(R)$ der totale Quotientenring des Ringes $R$
+  \footnote{Dies ist die Lokalisierung nach allen Nichtnullteiler},
+  so gibt es zu  jedem Unterring von $T \subset Q(R)$, ein multiplikatives
+  System $S \subset R$, so dass gilt $T = R_S$.
+  Also ist jeder Unterring des totalen Quotientenrings eine Lokalisierung des 
+  Ringes $R$. (Betrachte zunächst $R = \Z$)
+\end{Beh}
+
+\begin{Satz}[Allgemeines Nakayama Lemma]
+  Sei $R$ Ring, $I \subset R$ Ideal und $M$ ein $R$-Modul so gilt:\\
+  \begin{gather*}
+    M = IM \Rightarrow  \exists a \in I \; : \; (1+a)M=0
+  \end{gather*}
+\end{Satz}
+
+\begin{Lem}
+  Sei $M$ ein endlich erzeugter $R$-Modul. So gilt:
+  \begin{gather*}
+    End_R (M) = Aut_R(M) 
+  \end{gather*}
+\end{Lem}
+
+\begin{Satz}
+  Sei $M$ ein $R$-Modul, so sind folgende Aussagen äquivalent:\\
+  \begin{enumerate}[i)]
+    \item Es existieren $n,m \in \N$ so dass eine exakte Sequenz existiert:\\
+      \begin{tikzcd}
+        R^n \ar[r] & R^m \ar[r] & M \ar[r] & 0
+      \end{tikzcd}
+    \item Es existiert $\pi : R^n \rightarrow M$, surjektiv und
+      $\ker \pi$ endlich erzeugt.
+    \end{enumerate}
+  \end{Satz}
+
+\begin{Beh}
+  Sei $R$ ein nicht noetherscher Ring, so existiert ein $R$-Modul $M$ der
+   noethersch ist. Dieser muss nicht endlich erzeugt sein.
+\end{Beh}
+
+\begin{Satz}
+  Es gilt für einen endlichen kommutativen Ring $R$ mit Eins:\\
+  \begin{enumerate}[a)]
+    \item $R$ ist endlicher also auch endlich erzeugter $\Z$-Modul
+    \item $R$ ist als $\Z$-Modul artinsch und noetherscher Ring
+    \item $R$ ist endliches Produkt von lokalen, artinschen Ringen
+  \end{enumerate}
+\end{Satz}
+
+\begin{Beh}
+  Sei $R$ Ring und $m \subset R$ ein Ideal, so sind folgende Aussagen äquivalent:\\
+  \begin{enumerate}[i)]
+    \item $m$ ist maximales Ideal
+    \item $\forall f \in R  \setminus m : (f) + m = (1) $ 
+  \end{enumerate}
+  \begin{proof}
+    \begin{description}
+      \item[$i) \Rightarrow ii)$] Da $m$ maximal ist, gilt für ein Element $f$ das 
+        nicht aus $m$ ist, das $(f) + m$ ein Ideal ist, dass das maximale Ideal
+        $m$ enthält und nach der Maximalität nur das $(1)$ Ideal sein kann.
+      \item[$ii) \Rightarrow i)$] Zeige diese Richtung indirekt, hierzu ist
+        nur mindestens ein Element $f \in R \setminus m$ anzugeben, so das für
+        nicht maximale Ideal $m$ die Summe $(f) + m $ ungleich dem ganzen Ring
+        ist. Dies folgt leicht daraus, da $(f) + m$ als Ideal in einem maximalem
+        Ideal enthalten ist, und somit nicht der ganze Ring ist.
+    \end{description}
+  \end{proof}
+\end{Beh}
+
+\begin{Beh}
+  Seien $R_1,R_2$ kommutative, noethersche Ringe mit endlicher
+  Krulldimension. So \textbf{sollen} folgende Aussagen
+  gelten:\\
+  \begin{enumerate}[a)]
+    \item $dim(R_1 \times R_2) = dim(R_1) dim(R_2)$
+  \end{enumerate}
+\end{Beh}
+
+\begin{Lem}
+  In einem artinischen Ring ist das Nilradikal nilpotent.
+\end{Lem}
+
+\begin{Lem}
+  Sei $I$ eine partiell geordnete Menge, so sind folgende Aussagen äquivalent:\\
+  \begin{enumerate}[i)]
+    \item Jede echt aufsteigende Kette wird stationär
+    \item Jede Teilmenge $J \subset I$ hat ein maximales Element
+  \end{enumerate}
+  Es gilt die Aussage auch, falls man aufsteigend durch absteigend und maximales
+  durch minimales ersetzt.
+\end{Lem}
+
+\begin{Satz}
+  Seien $M,N$ endlich erzeugte  $R$-Moduln, über einen noetherschen Ring $R$.
+  So ist der $R$-Modul $Hom_R(M,N)$ endlich erzeugt.
+\end{Satz}
+
+\begin{Kor}
+  Sei $M$ ein $R$-Modul, endlich erzeugt über einem noetherschen Ring $R$.
+  So ist der duale Modul $Hom_R(M,R)$ noethersch.
+\end{Kor}
+
+\begin{Lem}
+  Sei $R$ ein artinscher Ring, so ist $\spec{R}$ diskret (mit der Zariski-Toplogie).
+  \begin{proof}
+    Da $R$ ein artinischer Ring ist, gilt das $\spec{R}$ endliche Menge ist, 
+    und mit dem maximal Spektrum übereinstimmt. Nun ist jeder einzelne Punkt
+    abgeschlossen, somit lässt sich jede daraus vereinigen, und es folgt die 
+    Behauptung.
+  \end{proof}
+\end{Lem}
+
+\begin{Lem}
+  Sei $R$ ein Ring und $p \in \spec{R}$ minimal bzgl. Inklusion. So ist
+  $p$ eine Teilmenge der Nullteiler des Ringes $R$.
+\end{Lem}
+
+\begin{Beh}
+  Sei $R$ Ring und $\Sigma$ die Menge aller multiplikativen Systeme
+  von $R$, die nicht die $0$ enthalten. So ist $\Sigma$ durch die
+  Inklusion partiell geordnet und nach dem Zornsches Lemma existieren
+  maximale Elemente.
+  Zeige nun für $S \in \Sigma$:\\
+  $S$  maximal $\Leftrightarrow$ $R \setminus S $ ist minimales Primideal.\\
+  Wobei die Minimalitäten stets bzgl der Inklusion zu verstehen sind.
+  Sei $S \in \Sigma$, so ist $S$ \textbf{saturiert}, falls gilt:\\
+  $ab \in S \Leftrightarrow a \in S \text{ und } a \in S$\\
+  Zeige nun:\\
+  $S$ saturiert $\Leftrightarrow$ $R \setminus S$ ist eine Vereinigung
+  von Primidealen.\\
+  Zeige das die Menge aller Nullteiler eine Vereinigung von Primidealen ist.
+\end{Beh}
+
+\begin{Lem}
+  Sei $R$ Ring, so zeige folgende Aussage:\\
+  Für alle $p \in \spec{R}$ ist $rad(R_p)=0$, dann gilt $rad(R) = 0$
+\end{Lem}
+
+\begin{Beh}
+  Es existiert ein Ring $R$, so dass $R_p$ noethersch ist, für alle $p \in \spec{R}$
+  aber $R$ nicht noethersch ist.
+\end{Beh}
+
+\begin{Satz}
+  Sei $R$ ein noetherscher Ring, so sind folgende Aussagen äquivalent:\\
+  \begin{enumerate}[i)]
+    \item $R$ ist artinsch
+    \item $\spec{R}$ ist diskret und endlich
+    \item $\spec{R}$ ist diskret
+  \end{enumerate}
+  \begin{proof}
+    \begin{description}
+      \item[$i) \Rightarrow ii) \Rightarrow iii)$] klar
+      \item[$iii) \Rightarrow i)$] Zeige das $dim(R)=0$ gilt oder nutze
+        die Quasikompaktheit von dem Spektrum aus.
+    \end{description}
+  \end{proof}
+\end{Satz}
+
+\begin{Satz}
+  Zeige, das falls in einem Ring $R$ jedes Primideal endlich erzeugt ist,
+  das der Ring schon noethersch ist.\\
+  Tipp: Betrachte die Menge $\Sigma$ aller nicht endlich erzeugten Ideale von $R$
+  und zeige das die (existierenden) maximalen Elemente Primideale sind.
+\end{Satz}
+
+\begin{Lem}
+  Sei $R$ Ring. Es gilt $\forall x \in R \; \exists n > 1 : x^n = x$ , dann
+  ist jedes Primideal schon maximal.
+\end{Lem}
+
+\begin{Beh}
+  Sei $R$ lokaler Ring, $M,N$ endlich erzeugte $R$-Moduln, so gilt:\\
+  $M \otimes N = 0 \Rightarrow M = 0 \text{ oder } N = 0$
+\end{Beh}
+
+\begin{Lem}
+  Es gilt in einem Ring $R$ mit den Idealen $I,J \subset R$ folgende Äquivalenz:
+  \begin{enumerate}[i)]
+    \item $V(I)=V(J)$
+    \item $\sqrt{I} = \sqrt{J}$
+  \end{enumerate}
+\end{Lem}
+
+\begin{Lem} 
+  \begin{enumerate}[1)]
+  \item Sei $G$ eine Gruppe und $U_\alpha$ die Familie aller
+    Untergruppen von $G$ so gilt: $\lim\limits_{\alpha} U_\alpha = G$.
+    Hinweis: Zeige zuerst dass das System aller Untergruppen auf kanonische Art
+    zu einem direkten System wird, durch Inklusion.
+  \item Sei $M$ eine Menge und $(M_\alpha, \vartheta_{\alpha\beta})$
+    ein direktes System von Teilmengen die durch die Inklusion zu
+    einem direkten System wird, zeige:
+    $\lim\limits_{\alpha} M_\alpha = \bigcup\limits_\alpha M_\alpha$
+  \end{enumerate}
+\end{Lem}
+
+Eigenschaften die Ringe haben können:
+\begin{enumerate}[a)]
+  \item endlich
+  \item noethersch
+  \item kommutativ
+  \item artinsch
+  \item integer
+  \item lokal
+  \item (Körper)
+  \item faktoriell
+\end{enumerate}
+
+Konstruktion von Ringen
+\begin{enumerate}[a)]
+  \item direkte Summe $(\bigoplus)$
+  \item Lokalisierung nach einem multiplikativen System  $S^{-1}R = R_S$
+  \item Quotientenbildung nach einem Ideal $R/I$
+  \item Gruppenring, bzgl einer Gruppe $R[G]$
+  \item Tensorprodukt von Ringen, wenn man diese als $R$-Modul über
+    den selben Ring auffasst, zb. kann man jeden Ring als $\Z$-Modul auffasen
+\end{enumerate}
+
+\begin{Beh}
+  Sei $R[X]$ ein Ring über einen noetherschen Ring $R$ dann ist nach
+  dem Hilbertbasissatz jedes Ideal aus dem Ring endlich erzeugt. Finde
+  zu folgenden Ideale endliche Erzeugendensysteme:\\
+  \begin{enumerate}[1)]
+  \item $R=\R$ und $I = \left( X + p \; | \;  p \in \N \text{ prim }  \right)$
+  \item $R$
+  \end{enumerate}
+\end{Beh}
+
+\begin{Beh}
+  Sei $R$ Ring, so soll gelten, für $(a) \subset R$ Hauptideal ist jedes Ideal $J$
+  das in $(a)$ enthalten ist, auch schon Hauptideal.
+\end{Beh}
+
+\begin{Lem}
+  Sei $R$ ein lokaler, artinischer Ring, so hat dieser genau ein nilpotentes
+  Primideal.
+\end{Lem}
+
+\begin{Beh}
+  Für einen Integritätsring $R$, gilt für $p \in \spec{R}$ das es 
+  eine kanonische Einbettung
+  \begin{tikzcd}
+    R_p \ar[r , hookrightarrow ] & Q(R)
+  \end{tikzcd}
+  in den Quotientenkörpern von $R$ gibt.
+  \begin{proof}
+    Verwende hierzu die universelle Eigenschaft der Lokalisierung nach
+    $p$, denn jedes Element ausser der Null wird in den Quotientenkörpern 
+    auf eine Einheit geschickt, somit muss diese Abbildung über die
+    Abbildung 
+    \begin{tikzcd}
+      R \ar[r , "\tau" ] & R_p
+    \end{tikzcd}
+    faktorisieren.
+  \end{proof}
+\end{Beh}
+
+\begin{Satz}
+  Lokalisierung ist ein Funktor.
+\end{Satz}
+
+\begin{Beh}
+  Sei $R=K[X_1,\ldots,X_n]$ der Polynomring in $n$ Variablen, so gibt es für
+  ein Ideal $I$ mit den Erzeugern $f_1,\ldots,f_k \in R$, ein Verfahren
+  um die Erzeugern von $\sqrt{I}$, zu bestimmen.
+\end{Beh}
+
+\begin{Lem}
+  Seien $I_1,\ldots,I_n$ Ideale eines Ringes $R$, die paarweise koprim sind,
+  so gilt: 
+  \begin{gather*}
+    \sum_i \prod_{j \neq i} I_j = R
+  \end{gather*}
+\end{Lem}
+
+\begin{Satz}
+  Sei $Z(p)$ die Zusammenhangskomponente eines top. Raums $X$ mit $p \in X$.
+  Folgende Aussagen sind äquivalent:
+  \begin{enumerate}[i)]
+    \item $Z(p)$ offen
+    \item $X$ ist lokal zusammenhängend für $\forall q \in Z(p)$
+  \end{enumerate}
+  Lokal zusammenhängend bedeutet, das zu jedem Punkt $p$ und jeder Umgebung $U$
+  dieses Punktes, eine Umgebung $W$ von $p$ existiert, mit $p \in W \subset U$
+  und $W$ zusammenhängend.
+  \begin{proof}
+    \begin{description}
+      \item["$\Rightarrow$"] Sei $U$ eine Umgebung von $p$ $\Rightarrow$ $U'=
+        Z(p) \cap U \subset U$ ist zusammenhängende Umgebung von $p$
+      \item["$\Leftarrow$"] Sei $q \in Z(p)$ und $V$ eine Umgebung von $q$ 
+        $\Rightarrow$ $\exists V'$ zusammenhängend so dass $q \in V' \subset V$
+        Da $q \in Z(p) \exists U'$ zusammenhängend so dass $\{ p  \} \cup \{ q  \}
+        \subset U'$ $\Rightarrow$  $V' \cup U'$ zusammenhängend und $p,q \in 
+        U' \cup V'$ $\Rightarrow V' \subset V' \cup U' \subset Z(p) \Rightarrow
+        Z(p)$   offen.
+    \end{description}
+  \end{proof}
+\end{Satz}
+
+\begin{Lem}[Zerlegung exakter Sequenzen in kurze exakte Sequenzen]
+  Seien $A,A',A''$ Rechts $R$-Moduln über einen Ring, eine Sequenz
+   $A_{\text{\Huge.}}$\\
+   \begin{center}
+     \begin{tikzcd}
+       A' \ar[r, "f"] & A \ar[r, "g"] & A''
+     \end{tikzcd}
+   \end{center}
+   und setze 
+   \begin{itemize}
+   \item $A_1 = ker(A' \rightarrow A) $
+   \item $A_2 = im(A' \rightarrow A)$
+   \item $A_3 = im(A \rightarrow A'')$
+   \end{itemize}
+   So sind folgende Aussagen äquivalent:\\
+   \begin{enumerate}[i)]
+     \item 
+       \begin{tikzcd}
+         A' \ar[r, "f"] & A \ar[r, "g"] & A''
+       \end{tikzcd}
+       ist exakt.
+     \item Die folgenden kurzen Sequenzen sind exakt\\
+       \begin{center}\begin{tikzcd}
+         0 \ar[r] & A_1 \ar[r] & A' \ar[r] & A_2 \ar[r] & 0 \\
+         0 \ar[r] & A_2 \ar[r] & A \ar[r] & A_3 \ar[r] & 0 \\
+         0 \ar[r] & A_3 \ar[r] & A'' \ar[r] & A''/A_3 \ar[r] & 0
+       \end{tikzcd}
+     \end{center}
+   \end{enumerate}
+ \end{Lem}
+
+\begin{Auf}
+  Bestimme für $R'=\Z$ alle maximalen Ideale von $R=R'[X]$.
+  Folgende Ideale aus $R'$ sind maximal:
+  \begin{enumerate}
+    \item $(X,p)$ für $p \in \Z$ prim 
+  \end{enumerate}
+\end{Auf}
+
+\begin{Auf}
+  Sei $\{ f_i : E \rightarrow E \}_{i \in I}$ Eine Familie von
+  injektiven Abbildungen, gilt dann für die Verkettung
+  $ f_1 \circ f_2 \circ \ldots$ dann auch das sie injektiv ist?
+  Für $I$ endlich: ja.\\
+  Für $I$ nicht endlich: nein.
+  \begin{proof}
+    Gegenbeispiel:\\ Setze $f(x) \coloneqq f_i (x) = ax+b$ für ein
+    $0 < |a| < 1$, dann gilt:
+    \begin{Beh}
+      Sei $f_n = f \circ f \circ \ldots \circ f$ n-mal, dann gilt:\\
+      $f_n(x) = a^n x + b \cdot \frac{a^{n+1} -1}{a-1}$
+      \begin{proof}
+        \begin{description}
+        \item[$n=1$:] klar
+        \item[$n \rightarrow n+1$:] Betrachte\\
+          \begin{align*}
+            f_{n+1}(x) = f(f_n(x)) 
+          &= 
+            f(a^n x + b \cdot \frac{a^{n+1}-1}{a-1}) 
+          &= 
+            a \cdot \left( a^n x + b \cdot \frac{a^{n+1}-1}{a-1} \right) + b        
+          &= \\
+            a^{n+1} x + b \cdot ( 1 + a \cdot \frac{a^{n+1}-1}{a-1})
+          &= 
+            a^{n+1} x + b \cdot (1 + a \cdot (1 + a + a^2 + \ldots a^{n}))
+          &= \\
+            a^{n+1} x + b \cdot (1  + a + a^2 + \ldots a^{n+1}))
+          &= 
+            a^{n+1} x + b \cdot \frac{a^{n+1}-1}{a-1}
+          \end{align*}
+        \end{description}
+        \end{proof}
+        Für die Bedingung $0 < |a| < 1$ ist $f$ injektiv, und für den
+        Grenzwert gilt: $\lim\limits_{n \rightarrow \infty} f_n(x) = \frac{b}{1-a}$.
+        Was konstant also nicht injektiv ist.
+    \end{Beh}
+  \end{proof}
+\end{Auf}
+
+\begin{Beh}
+  Sei $A$ ein Integritätsring und $X = \spec{A}$ sein Spektrum. So gilt für jede
+  offene, nichtleere Teilmenge von $X$, das sie dicht in $X$ liegt.
+  \begin{proof}
+    Da $A$ integer ist, gilt $(0) \in X$, betrachte nun $U \subset X$ offen, so 
+    ist der Abschluss von $U$ gleich dem gesamten Raum.
+  \end{proof}
+\end{Beh}
+
+\begin{Satz}
+  Sei $R$ ein kommutativer Ring mit Eins, dann gibt es einen
+  Homöomorphismus zwischen den Spektren $\spec{R}$ und
+  $\spec{R_{red}}$, wobei $R_{red}=R/\sqrt{(0)}$.\\
+  (Das Spektrum ignoriert die nilpotenten Elemente)
+\end{Satz}
+
+
+\end{document}
+
