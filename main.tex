@@ -344,9 +344,7 @@ $a_2 = b_2 + i_2$, so folgt\\
 
 \begin{Lem}
   Sei $M$ ein endlich erzeugter $R$-Modul. So gilt:
-  \begin{gather*}
-    End_R (M) = Aut_R(M) 
-  \end{gather*}
+  Jeder surjektiver Endomorphismus ist schon Automorphismus.
 \end{Lem}
 
 \begin{Satz}
@@ -400,19 +398,19 @@ $a_2 = b_2 + i_2$, so folgt\\
   Krulldimension. So \textbf{sollen} folgende Aussagen
   gelten:\\
   \begin{enumerate}[a)]
-    \item $dim(R_1 \times R_2) = dim(R_1) dim(R_2)$
+    \item $dim(R_1 \times R_2) =  \max \{ dim(R_1), dim(R_2) \} $
   \end{enumerate}
 \end{Beh}
 
 \begin{Lem}
-  In einem artinischen Ring ist das Nilradikal nilpotent.
+  In einem artinischen, noetherschen  Ring ist das Nilradikal nilpotent.
 \end{Lem}
 
 \begin{Lem}
   Sei $I$ eine partiell geordnete Menge, so sind folgende Aussagen äquivalent:\\
   \begin{enumerate}[i)]
     \item Jede echt aufsteigende Kette wird stationär
-    \item Jede Teilmenge $J \subset I$ hat ein maximales Element
+    \item Jede nichtleere Teilmenge $J \subset I$ hat ein maximales Element
   \end{enumerate}
   Es gilt die Aussage auch, falls man aufsteigend durch absteigend und maximales
   durch minimales ersetzt.
@@ -513,7 +511,7 @@ $a_2 = b_2 + i_2$, so folgt\\
 \begin{Lem} 
   \begin{enumerate}[1)]
   \item Sei $G$ eine Gruppe und $U_\alpha$ die Familie aller
-    Untergruppen von $G$ so gilt: $\lim\limits_{\alpha} U_\alpha = G$.
+    Untergruppen von $G$ so gilt: $\varinjlim\limits_{\alpha} U_\alpha = G$.
     Hinweis: Zeige zuerst dass das System aller Untergruppen auf kanonische Art
     zu einem direkten System wird, durch Inklusion.
   \item Sei $M$ eine Menge und $(M_\alpha, \vartheta_{\alpha\beta})$
