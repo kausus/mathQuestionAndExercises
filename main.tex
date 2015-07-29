@@ -719,6 +719,46 @@ Konstruktion von Ringen
   (Das Spektrum ignoriert die nilpotenten Elemente)
 \end{Satz}
 
+\begin{Satz}[Schröder-Bernstein]
+  Seien $A,B$ Mengen ,$\tau : A \rightarrow B$ ,
+  $\eta : B \rightarrow A$ injektive Abbidlungen so existiert eine
+  Bijektion $\rho : A \rightarrow B$. (Selbe Aussagen mit surjektiv
+  statt injektiv)
+  \begin{proof}
+    Betrachte folgende Menge $A' \subset A$ \\
+    \begin{gather*}
+      A' = \left\{ x \in A \; \Big| \;  \forall n \in \N : x \in (\tau \circ
+        \eta)^n (M) \Rightarrow x \in (\tau \circ \eta)^n \circ
+        \tau(N) \right\}
+    \end{gather*}
+    dann setze als Bijektion die folgende Abbildung
+    $\rho : A \rightarrow B$ mit $\rho(x) = \tau^{-1}(x)$ für
+    $x \in A'$ und sonst $\rho(x)=\eta(x)$ für $ x \not\in A'$.
+  \end{proof}
+\end{Satz}
+
+
+\begin{Auf}
+  Seien $n,m \in \N$, $[n] \coloneqq \{ 0,\ldots,n \}$ , $S_n$ für
+  die symmetrische Gruppe. Bestimme die Mächtigkeit der folgenden
+  endlichen Mengen.
+  \begin{gather*}
+    \left\{ f: [n] \rightarrow [m] \; | \; \text{ f ist
+        ordnungserhaltend }\right\}\\
+    \left\{ \sigma \in S_n \; | \; \sigma \text{ k-zykel  }\right\}
+  \end{gather*}
+\end{Auf}
+
+\begin{Auf}
+  Sei $X$ ein toplogischer Raum, so gilt:
+  \begin{enumerate}[1)]
+  \item $K \subset X$ kompakt und $A \subset K$ abgeschlossen, dann
+    ist $A$ kompakt
+  \item $X$ hausdorffsch, $K \subset X$ kompakt, dann gilt $K$ abgeschlossen
+  \item $f:X \rightarrow Y$ stetig, $Y$ hausdorffsch, $K \subset X$
+    kompakt, dann ist $f(K)$ kompakt
+  \end{enumerate}
+\end{Auf}
 
 \end{document}
 
