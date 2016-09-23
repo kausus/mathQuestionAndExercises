@@ -9,7 +9,8 @@
 \part{Aufgabensammlung}
 
 \section{Globale Analysis}
-
+%\setmainfont{Charis SIL}
+Quelle ist \cite[Seite 4]{ramananglobal}.
 \begin{Satz}
 	Sei $ \mathcal{F} $ eine Garbe eines topologischen
 	Raums $ X $. Dann existiert ein Raum $ E(\mathcal{F}) $
@@ -25,8 +26,10 @@
 		Mit der Äquivalenzrelation $ (U,s)\sim (V,t) $ gdw.
 		eine Umgebung $x\in W \subset U\cap V $ existiert mit
 		$ res_{UW}(s)=res_{VW}(t) $-
-		Definiere nun $ E(\mathcal{F}) \coloneqq \bigcup_{x\in X} \mathcal{F}_x$. Dieser Raum muss nun noch mit einer
-		Topologie ausgestattet werden.
+		Definiere nun den etalen Raum $ E(\mathcal{F}) \coloneqq \bigcup_{x\in X} \mathcal{F}_x$. Dieser Raum muss nun noch mit einer
+		Topologie ausgestattet werden. Die Basis der Topologie
+		ist gegeben durch offene Mengen $ \mathcal{F}(U)$ 
+		für offene Mengen $ U $ und den Elementen $ s\in \mathcal{F}(U) $ daraus. Die Projektion $ \pi \colon E(\mathcal{F}) \to X , \mathcal{F} \mapsto x $.
 	\end{proof}
 \end{Satz}
 
