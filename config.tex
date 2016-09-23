@@ -19,6 +19,7 @@
 
 %commutative diagramms
 \usepackage{tikz-cd}
+%\usetikzlibrary{babel}
 
 %links                                              
 \usepackage{hyperref}                               
@@ -62,6 +63,21 @@
 \newcommand{\spec}[1]{Spec \left( #1 \right)}
 % \newcommand{\exxp}[1]{\exp \left( #1 \right)}       
 % \renewcommand{\sin}[1]{\sin \left( #1 \right)}      
+
+%own color for proof environment
+\definecolor{mygray}{rgb}{0.2,0.2,0.2}
+
+ \makeatletter
+    \renewenvironment{proof}[1][\proofname]{\par
+    	\pushQED{\hfill$\blacksquare$}%
+    	\slshape\color{mygray}\topsep6\p@\@plus6\p@\relax
+    	\noindent%
+    	\raisebox{\baselineskip}{\rlap{\bfseries%
+    			#1\@addpunct{.}}}\ignorespaces%TEst
+    }{%
+    \popQED\@endpefalse
+}
+\makeatother
 
 %title                                            
 % \title{Übungsblatt ??}                            

@@ -2,9 +2,33 @@
 
 \input{config}
 
+
+
 \begin{document}
 
 \part{Aufgabensammlung}
+
+\section{Globale Analysis}
+
+\begin{Satz}
+	Sei $ \mathcal{F} $ eine Garbe eines topologischen
+	Raums $ X $. Dann existiert ein Raum $ E(\mathcal{F}) $
+	sodass $ \Gamma(X \to E(\mathcal{F})) = \mathcal{F} $ ist, d.h.
+	die Garbe ist durch die Menge aller Schnitte der Abbildung
+	$ E(\mathcal{F}) \to X $ gegeben.
+	\begin{proof}
+		Hierzu müssen wir den stalk $ \mathcal{F}_x $ der Garbe
+		an einem Punkt $ x\in X $ definieren.
+		\begin{gather*}
+			\mathcal{F}_x \coloneqq \left\{ (U,s) \middle| U \text{ Umgebung von }x , s\in \mathcal{F}(U)  \right\} / \sim
+		\end{gather*}
+		Mit der Äquivalenzrelation $ (U,s)\sim (V,t) $ gdw.
+		eine Umgebung $x\in W \subset U\cap V $ existiert mit
+		$ res_{UW}(s)=res_{VW}(t) $-
+		Definiere nun $ E(\mathcal{F}) \coloneqq \bigcup_{x\in X} \mathcal{F}_x$. Dieser Raum muss nun noch mit einer
+		Topologie ausgestattet werden.
+	\end{proof}
+\end{Satz}
 
 \section{Ringe}
 
@@ -312,17 +336,17 @@ $a_2 = b_2 + i_2$, so folgt\\
       \coprod\limits_{i} R_i \; = \;  \prod\limits_i (i,R_i)
     \end{gather*}
     So folgt die Behauptung durch folgende kanonische Abbildung:\\
-    \begin{center}
-    \begin{tikzcd}
-      \spec{\prod\limits_{i = 1}^n R_i} 
-      \ar[r]
-      & \coprod\limits_{i=1}^n \spec{R_i}
-    \end{tikzcd}\\
-    \begin{tikzcd}
-      R_1 \times \ldots \times p_i \times \ldots \times R_n \ar[r,
-      mapsto] & (i,p_i)
-    \end{tikzcd}
-  \end{center}
+%    \begin{center}
+%    \begin{tikzcd}
+%      \spec{\prod\limits_{i = 1}^n R_i} 
+%      \ar[r]
+%      & \coprod\limits_{i=1}^n \spec{R_i}
+%    \end{tikzcd}\\
+%    \begin{tikzcd}
+%      R_1 \times \ldots \times p_i \times \ldots \times R_n \ar[r,
+%      mapsto] & (i,p_i)
+%    \end{tikzcd}
+%  \end{center}
 \end{proof}
 \end{Satz}
 
@@ -351,9 +375,9 @@ $a_2 = b_2 + i_2$, so folgt\\
   Sei $M$ ein $R$-Modul, so sind folgende Aussagen äquivalent:\\
   \begin{enumerate}[i)]
     \item Es existieren $n,m \in \N$ so dass eine exakte Sequenz existiert:\\
-      \begin{tikzcd}
-        R^n \ar[r] & R^m \ar[r] & M \ar[r] & 0
-      \end{tikzcd}
+%      \begin{tikzcd}
+%        R^n \ar[r] & R^m \ar[r] & M \ar[r] & 0
+%      \end{tikzcd}
     \item Es existiert $\pi : R^n \rightarrow M$, surjektiv und
       $\ker \pi$ endlich erzeugt.
     \end{enumerate}
@@ -566,18 +590,18 @@ Konstruktion von Ringen
 \begin{Beh}
   Für einen Integritätsring $R$, gilt für $p \in \spec{R}$ das es 
   eine kanonische Einbettung
-  \begin{tikzcd}
-    R_p \ar[r , hookrightarrow ] & Q(R)
-  \end{tikzcd}
+%  \begin{tikzcd}
+%    R_p \arrow[r , hookrightarrow ] & Q(R)
+%  \end{tikzcd}
   in den Quotientenkörpern von $R$ gibt.
   \begin{proof}
     Verwende hierzu die universelle Eigenschaft der Lokalisierung nach
     $p$, denn jedes Element ausser der Null wird in den Quotientenkörpern 
     auf eine Einheit geschickt, somit muss diese Abbildung über die
     Abbildung 
-    \begin{tikzcd}
-      R \ar[r , "\tau" ] & R_p
-    \end{tikzcd}
+%    \begin{tikzcd}
+%      R \ar[r , "\tau" ] & R_p
+%    \end{tikzcd}
     faktorisieren.
   \end{proof}
 \end{Beh}
@@ -627,11 +651,11 @@ Konstruktion von Ringen
 \begin{Lem}[Zerlegung exakter Sequenzen in kurze exakte Sequenzen]
   Seien $A,A',A''$ Rechts $R$-Moduln über einen Ring, eine Sequenz
    $A_{\text{\Huge.}}$\\
-   \begin{center}
-     \begin{tikzcd}
-       A' \ar[r, "f"] & A \ar[r, "g"] & A''
-     \end{tikzcd}
-   \end{center}
+%   \begin{center}
+%     \begin{tikzcd}
+%       A' \ar[r, "f"] & A \ar[r, "g"] & A''
+%     \end{tikzcd}
+%   \end{center}
    und setze 
    \begin{itemize}
    \item $A_1 = ker(A' \rightarrow A) $
@@ -639,20 +663,20 @@ Konstruktion von Ringen
    \item $A_3 = im(A \rightarrow A'')$
    \end{itemize}
    So sind folgende Aussagen äquivalent:\\
-   \begin{enumerate}[i)]
-     \item 
-       \begin{tikzcd}
-         A' \ar[r, "f"] & A \ar[r, "g"] & A''
-       \end{tikzcd}
-       ist exakt.
-     \item Die folgenden kurzen Sequenzen sind exakt\\
-       \begin{center}\begin{tikzcd}
-         0 \ar[r] & A_1 \ar[r] & A' \ar[r] & A_2 \ar[r] & 0 \\
-         0 \ar[r] & A_2 \ar[r] & A \ar[r] & A_3 \ar[r] & 0 \\
-         0 \ar[r] & A_3 \ar[r] & A'' \ar[r] & A''/A_3 \ar[r] & 0
-       \end{tikzcd}
-     \end{center}
-   \end{enumerate}
+%   \begin{enumerate}[i)]
+%     \item 
+%       \begin{tikzcd}
+%         A' \ar[r, "f"] & A \ar[r, "g"] & A''
+%       \end{tikzcd}
+%       ist exakt.
+%     \item Die folgenden kurzen Sequenzen sind exakt\\
+%       \begin{center}\begin{tikzcd}
+%         0 \ar[r] & A_1 \ar[r] & A' \ar[r] & A_2 \ar[r] & 0 \\
+%         0 \ar[r] & A_2 \ar[r] & A \ar[r] & A_3 \ar[r] & 0 \\
+%         0 \ar[r] & A_3 \ar[r] & A'' \ar[r] & A''/A_3 \ar[r] & 0
+%       \end{tikzcd}
+%     \end{center}
+%   \end{enumerate}
  \end{Lem}
 
 \begin{Auf}
